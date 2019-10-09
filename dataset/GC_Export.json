@@ -1,0 +1,17 @@
+{
+	"name": "GC_Export",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureGCSource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "gcexport"
+			}
+		}
+	}
+}
