@@ -10,6 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": "GC.csv",
+				"folderPath": "Input",
 				"container": "gcexport"
 			}
 		}
