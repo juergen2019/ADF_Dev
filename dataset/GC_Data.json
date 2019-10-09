@@ -1,0 +1,1048 @@
+{
+	"name": "GC_Data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureGCSource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "GC.csv",
+				"container": "gcexport"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "date",
+				"type": "String"
+			},
+			{
+				"name": " time",
+				"type": "String"
+			},
+			{
+				"name": " filename",
+				"type": "String"
+			},
+			{
+				"name": " axPower",
+				"type": "String"
+			},
+			{
+				"name": " aPower_Relative_Intensity",
+				"type": "String"
+			},
+			{
+				"name": " aBikeScore",
+				"type": "String"
+			},
+			{
+				"name": " Skiba_aVI",
+				"type": "String"
+			},
+			{
+				"name": " aPower_Response_Index",
+				"type": "String"
+			},
+			{
+				"name": " aNP",
+				"type": "String"
+			},
+			{
+				"name": " aIF",
+				"type": "String"
+			},
+			{
+				"name": " aTSS",
+				"type": "String"
+			},
+			{
+				"name": " aVI",
+				"type": "String"
+			},
+			{
+				"name": " aPower_Efficiency_Factor",
+				"type": "String"
+			},
+			{
+				"name": " aTSS_per_hour",
+				"type": "String"
+			},
+			{
+				"name": " Aerobic_Decoupling",
+				"type": "String"
+			},
+			{
+				"name": " Activities",
+				"type": "String"
+			},
+			{
+				"name": " To_Exhaustion",
+				"type": "String"
+			},
+			{
+				"name": " Duration",
+				"type": "String"
+			},
+			{
+				"name": " Time_Moving",
+				"type": "String"
+			},
+			{
+				"name": " Time_Carrying_(Est)",
+				"type": "String"
+			},
+			{
+				"name": " Elevation_Gain_Carrying_(Est)",
+				"type": "String"
+			},
+			{
+				"name": " Distance",
+				"type": "String"
+			},
+			{
+				"name": " Climb_Rating",
+				"type": "String"
+			},
+			{
+				"name": " Athlete_Weight",
+				"type": "String"
+			},
+			{
+				"name": " Athlete_Bodyfat",
+				"type": "String"
+			},
+			{
+				"name": " Athlete_Lean_Weight",
+				"type": "String"
+			},
+			{
+				"name": " Athlete_Bodyfat_Percent",
+				"type": "String"
+			},
+			{
+				"name": " Elevation_Gain",
+				"type": "String"
+			},
+			{
+				"name": " Elevation_Loss",
+				"type": "String"
+			},
+			{
+				"name": " Work",
+				"type": "String"
+			},
+			{
+				"name": " Average_Speed",
+				"type": "String"
+			},
+			{
+				"name": " Average_Power",
+				"type": "String"
+			},
+			{
+				"name": " Average_SmO2",
+				"type": "String"
+			},
+			{
+				"name": " Average_tHb",
+				"type": "String"
+			},
+			{
+				"name": " Average_aPower",
+				"type": "String"
+			},
+			{
+				"name": " Nonzero_Average_Power",
+				"type": "String"
+			},
+			{
+				"name": " Average_Heart_Rate",
+				"type": "String"
+			},
+			{
+				"name": " Average_Core_Temperature",
+				"type": "String"
+			},
+			{
+				"name": " Heartbeats",
+				"type": "String"
+			},
+			{
+				"name": " HrPw_Ratio",
+				"type": "String"
+			},
+			{
+				"name": " Workbeat_stress",
+				"type": "String"
+			},
+			{
+				"name": " Watts:RPE_Ratio",
+				"type": "String"
+			},
+			{
+				"name": " Power_Percent_of_Max",
+				"type": "String"
+			},
+			{
+				"name": " HrNp_Ratio",
+				"type": "String"
+			},
+			{
+				"name": " Average_Cadence",
+				"type": "String"
+			},
+			{
+				"name": " Average_Temp",
+				"type": "String"
+			},
+			{
+				"name": " Max_Power",
+				"type": "String"
+			},
+			{
+				"name": " Max_SmO2",
+				"type": "String"
+			},
+			{
+				"name": " Max_tHb",
+				"type": "String"
+			},
+			{
+				"name": " Min_SmO2",
+				"type": "String"
+			},
+			{
+				"name": " Min_tHb",
+				"type": "String"
+			},
+			{
+				"name": " Max_Heartrate",
+				"type": "String"
+			},
+			{
+				"name": " Min_Heartrate",
+				"type": "String"
+			},
+			{
+				"name": " Max_Core_Temperature",
+				"type": "String"
+			},
+			{
+				"name": " Max_Speed",
+				"type": "String"
+			},
+			{
+				"name": " Max_Cadence",
+				"type": "String"
+			},
+			{
+				"name": " Max_Temp",
+				"type": "String"
+			},
+			{
+				"name": " Min_Temp",
+				"type": "String"
+			},
+			{
+				"name": " 95%_Heartrate",
+				"type": "String"
+			},
+			{
+				"name": " VAM",
+				"type": "String"
+			},
+			{
+				"name": " Effect_of_Altitude",
+				"type": "String"
+			},
+			{
+				"name": " Gradient",
+				"type": "String"
+			},
+			{
+				"name": " Average_Power_Variance",
+				"type": "String"
+			},
+			{
+				"name": " Max_Power_Variance",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Torque_Effectiveness",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Torque_Effectiveness",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Pedal_Smoothness",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Pedal_Smoothness",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Pedal_Center_Offset",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Pedal_Center_Offset",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Power_Phase_Start",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Power_Phase_Start",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Power_Phase_End",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Power_Phase_End",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Peak_Power_Phase_Start",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Peak_Power_Phase_Start",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Peak_Power_Phase_End",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Peak_Power_Phase_End",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Power_Phase_Length",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Power_Phase_Length",
+				"type": "String"
+			},
+			{
+				"name": " Average_Left_Peak_Power_Phase_Length",
+				"type": "String"
+			},
+			{
+				"name": " Average_Right_Peak_Power_Phase_Length",
+				"type": "String"
+			},
+			{
+				"name": " Calories_(HR)",
+				"type": "String"
+			},
+			{
+				"name": " Checksum",
+				"type": "String"
+			},
+			{
+				"name": " Aerobic_TISS",
+				"type": "String"
+			},
+			{
+				"name": " Anaerobic_TISS",
+				"type": "String"
+			},
+			{
+				"name": " Critical_Power",
+				"type": "String"
+			},
+			{
+				"name": " xPower",
+				"type": "String"
+			},
+			{
+				"name": " Relative_Intensity",
+				"type": "String"
+			},
+			{
+				"name": " BikeScore",
+				"type": "String"
+			},
+			{
+				"name": " Skiba_VI",
+				"type": "String"
+			},
+			{
+				"name": " TISS_Aerobicity",
+				"type": "String"
+			},
+			{
+				"name": " Response_Index",
+				"type": "String"
+			},
+			{
+				"name": " NP",
+				"type": "String"
+			},
+			{
+				"name": " IF",
+				"type": "String"
+			},
+			{
+				"name": " TSS",
+				"type": "String"
+			},
+			{
+				"name": " VI",
+				"type": "String"
+			},
+			{
+				"name": " Efficiency_Factor",
+				"type": "String"
+			},
+			{
+				"name": " TSS_per_hour",
+				"type": "String"
+			},
+			{
+				"name": " Exhaustion_Best_R",
+				"type": "String"
+			},
+			{
+				"name": " Daniels_Points",
+				"type": "String"
+			},
+			{
+				"name": " Daniels_EqP",
+				"type": "String"
+			},
+			{
+				"name": " LNP",
+				"type": "String"
+			},
+			{
+				"name": " RTP",
+				"type": "String"
+			},
+			{
+				"name": " xPace",
+				"type": "String"
+			},
+			{
+				"name": " IWF",
+				"type": "String"
+			},
+			{
+				"name": " GOVSS",
+				"type": "String"
+			},
+			{
+				"name": " H1_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H2_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H3_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H4_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H5_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H6_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H7_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H8_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H9_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H10_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H1_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H2_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H3_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H4_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H5_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H6_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H7_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H8_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H9_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " H10_Percent_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " Left/Right_Balance",
+				"type": "String"
+			},
+			{
+				"name": " P1_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P2_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P3_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P4_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P5_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P6_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P7_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P8_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P9_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P10_Time_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P1_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P2_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P3_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P4_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P5_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P6_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P7_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P8_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P9_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " P10_Percent_in_Pace_Zone",
+				"type": "String"
+			},
+			{
+				"name": " 10_sec_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 15_sec_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 20_sec_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 30_sec_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 1_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 2_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 3_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 5_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 8_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 10_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 20_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 30_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 60_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 90_min_Peak_Pace",
+				"type": "String"
+			},
+			{
+				"name": " 10_sec_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 15_sec_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 20_sec_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 30_sec_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 1_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 2_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 3_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 5_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 8_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 10_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 20_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 30_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 60_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " 90_min_Peak_Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " Best_50m",
+				"type": "String"
+			},
+			{
+				"name": " Best_100m",
+				"type": "String"
+			},
+			{
+				"name": " Best_200m",
+				"type": "String"
+			},
+			{
+				"name": " Best_400m",
+				"type": "String"
+			},
+			{
+				"name": " Best_500m",
+				"type": "String"
+			},
+			{
+				"name": " Best_800m",
+				"type": "String"
+			},
+			{
+				"name": " Best_1000m",
+				"type": "String"
+			},
+			{
+				"name": " Best_1500m",
+				"type": "String"
+			},
+			{
+				"name": " Best_2000m",
+				"type": "String"
+			},
+			{
+				"name": " Best_3000m",
+				"type": "String"
+			},
+			{
+				"name": " Best_4000m",
+				"type": "String"
+			},
+			{
+				"name": " Best_5000m",
+				"type": "String"
+			},
+			{
+				"name": " Best_10km",
+				"type": "String"
+			},
+			{
+				"name": " Best_15km",
+				"type": "String"
+			},
+			{
+				"name": " Best_20km",
+				"type": "String"
+			},
+			{
+				"name": " Best_Half_Marathon",
+				"type": "String"
+			},
+			{
+				"name": " Best_30km",
+				"type": "String"
+			},
+			{
+				"name": " Best_40km",
+				"type": "String"
+			},
+			{
+				"name": " Best_Marathon",
+				"type": "String"
+			},
+			{
+				"name": " MMP_Percentage",
+				"type": "String"
+			},
+			{
+				"name": " Power_Zone",
+				"type": "String"
+			},
+			{
+				"name": " Fatigue_Index",
+				"type": "String"
+			},
+			{
+				"name": " Pacing_Index",
+				"type": "String"
+			},
+			{
+				"name": " 1_sec_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 5_sec_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 10_sec_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 15_sec_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 20_sec_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 30_sec_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 1_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 2_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 3_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 5_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 8_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 10_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 20_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 30_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 60_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 90_min_Peak_Power",
+				"type": "String"
+			},
+			{
+				"name": " 1_min_Peak_Power_HR",
+				"type": "String"
+			},
+			{
+				"name": " 5_min_Peak_Power_HR",
+				"type": "String"
+			},
+			{
+				"name": " 10_min_Peak_Power_HR",
+				"type": "String"
+			},
+			{
+				"name": " 20_min_Peak_Power_HR",
+				"type": "String"
+			},
+			{
+				"name": " 30_min_Peak_Power_HR",
+				"type": "String"
+			},
+			{
+				"name": " 60_min_Peak_Power_HR",
+				"type": "String"
+			},
+			{
+				"name": " Average_Running_Cadence",
+				"type": "String"
+			},
+			{
+				"name": " Max_Running_Cadence",
+				"type": "String"
+			},
+			{
+				"name": " Average_Ground_Contact_Time",
+				"type": "String"
+			},
+			{
+				"name": " Average_Vertical_Oscillation",
+				"type": "String"
+			},
+			{
+				"name": " Pace",
+				"type": "String"
+			},
+			{
+				"name": " Efficiency_Index",
+				"type": "String"
+			},
+			{
+				"name": " Average_Stride_Length",
+				"type": "String"
+			},
+			{
+				"name": " Distance_Swim",
+				"type": "String"
+			},
+			{
+				"name": " Pace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " Swim_Pace",
+				"type": "String"
+			},
+			{
+				"name": " Stroke_Rate",
+				"type": "String"
+			},
+			{
+				"name": " Strokes_Per_Length",
+				"type": "String"
+			},
+			{
+				"name": " SWolf",
+				"type": "String"
+			},
+			{
+				"name": " Swim_Pace_Free",
+				"type": "String"
+			},
+			{
+				"name": " Swim_Pace_Back",
+				"type": "String"
+			},
+			{
+				"name": " Swim_Pace_Breast",
+				"type": "String"
+			},
+			{
+				"name": " Swim_Pace_Fly",
+				"type": "String"
+			},
+			{
+				"name": " L1_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L2_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L3_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L4_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L5_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L6_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L7_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L8_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L9_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " L10_Sustained_Time",
+				"type": "String"
+			},
+			{
+				"name": " xPower_Swim",
+				"type": "String"
+			},
+			{
+				"name": " STP",
+				"type": "String"
+			},
+			{
+				"name": " xPace_Swim",
+				"type": "String"
+			},
+			{
+				"name": " SRI",
+				"type": "String"
+			},
+			{
+				"name": " SwimScore",
+				"type": "String"
+			},
+			{
+				"name": " TriScore",
+				"type": "String"
+			},
+			{
+				"name": " L1_Time_in_Zone",
+				"type": "String"
+			},
+			{
+				"name": " L2_Time_in_Zone",
+				"type": "String"
+			}
+		]
+	}
+}
