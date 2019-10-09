@@ -1,6 +1,7 @@
 {
 	"name": "CustomerSCDType2",
 	"properties": {
+		"description": "This is a Mapping Data flow to populate a SCD Type 2 Table",
 		"type": "MappingDataFlow",
 		"typeProperties": {
 			"sources": [
