@@ -1,0 +1,51 @@
+{
+	"name": "SCDType1",
+	"properties": {
+		"type": "MappingDataFlow",
+		"typeProperties": {
+			"sources": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlDimCustomer",
+						"type": "DatasetReference"
+					},
+					"name": "AzureSqlDimCustomer"
+				},
+				{
+					"dataset": {
+						"referenceName": "AzureSqlCustomer",
+						"type": "DatasetReference"
+					},
+					"name": "AzureSqlCustomer"
+				}
+			],
+			"sinks": [
+				{
+					"dataset": {
+						"referenceName": "AzureSqlDimCustomer",
+						"type": "DatasetReference"
+					},
+					"name": "sink1"
+				}
+			],
+			"transformations": [
+				{
+					"name": "CreateHash"
+				},
+				{
+					"name": "ExistsHashInDim"
+				},
+				{
+					"name": "LookupDates"
+				},
+				{
+					"name": "SetAttributes"
+				},
+				{
+					"name": "AlterRow"
+				}
+			],
+			"script": "\n\nsource(output(\n\t\tCustomerID as integer,\n\t\tTitle as string,\n\t\tFirstName as string,\n\t\tMiddleName as string,\n\t\tLastName as string,\n\t\tSuffix as string,\n\t\tCompanyName as string,\n\t\tSalesPerson as string,\n\t\tEmailAddress as string,\n\t\tPasswordHash as string,\n\t\tPasswordSalt as string,\n\t\tModifiedDate as timestamp,\n\t\tInsertDate as timestamp,\n\t\tUpdateDate as timestamp,\n\t\tHashKey as string,\n\t\tCurrentInd as string,\n\t\tEffDate as timestamp,\n\t\tExpDate as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> AzureSqlDimCustomer\nsource(output(\n\t\tCustomerID as integer,\n\t\tNameStyle as boolean,\n\t\tTitle as string,\n\t\tFirstName as string,\n\t\tMiddleName as string,\n\t\tLastName as string,\n\t\tSuffix as string,\n\t\tCompanyName as string,\n\t\tSalesPerson as string,\n\t\tEmailAddress as string,\n\t\tPhone as string,\n\t\tPasswordHash as string,\n\t\tPasswordSalt as string,\n\t\trowguid as string,\n\t\tModifiedDate as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> AzureSqlCustomer\nAzureSqlCustomer derive(HashKey = sha1(FirstName+LastName+CompanyName)) ~> CreateHash\nCreateHash, AzureSqlDimCustomer exists(CreateHash@HashKey == AzureSqlDimCustomer@HashKey,\n\tnegate:true,\n\tbroadcast: 'none')~> ExistsHashInDim\nExistsHashInDim, AzureSqlDimCustomer lookup(AzureSqlCustomer@CustomerID == AzureSqlDimCustomer@CustomerID,\n\tbroadcast: 'none')~> LookupDates\nLookupDates derive(InsertedDate = iif(isNull(InsertDate),currentTimestamp(),(InsertDate)),\n\t\tUpdatedDate = currentTimestamp()) ~> SetAttributes\nSetAttributes alterRow(upsertIf(true())) ~> AlterRow\nAlterRow sink(input(\n\t\tCustomerID as integer,\n\t\tTitle as string,\n\t\tFirstName as string,\n\t\tMiddleName as string,\n\t\tLastName as string,\n\t\tSuffix as string,\n\t\tCompanyName as string,\n\t\tSalesPerson as string,\n\t\tEmailAddress as string,\n\t\tPasswordHash as string,\n\t\tPasswordSalt as string,\n\t\tModifiedDate as timestamp,\n\t\tInsertDate as timestamp,\n\t\tUpdateDate as timestamp,\n\t\tHashKey as string,\n\t\tCurrentInd as string,\n\t\tEffDate as timestamp,\n\t\tExpDate as timestamp\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tdeletable:false,\n\tinsertable:true,\n\tupdateable:false,\n\tupsertable:true,\n\tformat: 'table',\n\tkeys:['sink1@CustomerID'],\n\tmapColumn(\n\t\tCustomerID = AzureSqlCustomer@CustomerID,\n\t\tTitle = AzureSqlCustomer@Title,\n\t\tFirstName = AzureSqlCustomer@FirstName,\n\t\tMiddleName = AzureSqlCustomer@MiddleName,\n\t\tLastName = AzureSqlCustomer@LastName,\n\t\tSuffix = AzureSqlCustomer@Suffix,\n\t\tCompanyName = AzureSqlCustomer@CompanyName,\n\t\tSalesPerson = AzureSqlCustomer@SalesPerson\n\t)) ~> sink1"
+		}
+	}
+}
