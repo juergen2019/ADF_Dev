@@ -1,0 +1,92 @@
+{
+	"name": "CTLData",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureGCSource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "CTL.csv",
+				"container": "gcexport"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Day",
+				"type": "String"
+			},
+			{
+				"name": "Goal1",
+				"type": "String"
+			},
+			{
+				"name": "Real2",
+				"type": "String"
+			},
+			{
+				"name": "Rides",
+				"type": "String"
+			},
+			{
+				"name": "ATL",
+				"type": "String"
+			},
+			{
+				"name": "CTL",
+				"type": "String"
+			},
+			{
+				"name": "TSB",
+				"type": "String"
+			},
+			{
+				"name": "3d roll TSS",
+				"type": "String"
+			},
+			{
+				"name": "7d roll TSS",
+				"type": "String"
+			},
+			{
+				"name": "28d roll TSS",
+				"type": "String"
+			},
+			{
+				"name": "Goal10",
+				"type": "String"
+			},
+			{
+				"name": "Real11",
+				"type": "String"
+			},
+			{
+				"name": "7d roll CTL ramp",
+				"type": "String"
+			},
+			{
+				"name": "Total Weekly Hours",
+				"type": "String"
+			},
+			{
+				"name": "Total Cumulative Hours",
+				"type": "String"
+			},
+			{
+				"name": "CTL Ramp Rate",
+				"type": "String"
+			},
+			{
+				"name": "Total Weekly TSS",
+				"type": "String"
+			}
+		]
+	}
+}
